@@ -40,7 +40,7 @@ In this lab you will explore :
 Let's deploy some resources:
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_01/iac/provider.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_01/iac/provider.tf">
     Edit provider.tf
 </walkthrough-editor-open-file>
 ```tf
@@ -51,7 +51,7 @@ provider "google" {
 ```
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_01/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_01/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 ```tf
@@ -85,7 +85,7 @@ _*Example*_ : John Do -> dataset_id = "tf_ad_lab_bqd_jdo"
 
 Let's access the working directory :
 ```bash
-cd ~/cloudshell_open/terraform_labs/advanced/lab_01/iac/
+cd ~/cloudshell_open/wam-tf-labs/advanced/lab_01/iac/
 ```
 Initialize terraform :
 ```bash
@@ -117,7 +117,7 @@ Suppose that you have accidentely changed the name of the bigquery dataset. Terr
 Let's do this, try to add a random string to the name of the dataset.
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_01/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_01/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 
@@ -205,7 +205,7 @@ In order to make Terraform share management responsibilities of a single object 
 In this section we will deploy a Google Cloud Function using terraform.
 Edit main.tf and add the following resources.
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_01/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_01/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 ```tf
@@ -262,7 +262,7 @@ terraform apply --auto-approve
 Let's edit function source code and make some changes.
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_01/src/main.py">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_01/src/main.py">
     Edit main.py
 </walkthrough-editor-open-file>
 ```python
@@ -281,7 +281,7 @@ terraform should propose to replace only the google_storage_bucket_object.archiv
 Terraform doesn't suggest to update the cloud function, yet we changed the source code of the application. This happens because the zipped source file is still name "src.zip", neither the name of the output file nor the location has been changed, it is the reason why Terraform can't catch the change. However some hidden attributes related to the resource are going to be changed, for instance the _*md5hash*_ of the archive file, we can make use of that to explicitely tell Terraform to trigger function replacement whenever this attribute changes. We can do this by adding the following block to the cloud function resource definiton.
 
  <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_01/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_01/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 

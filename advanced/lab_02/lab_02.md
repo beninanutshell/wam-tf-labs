@@ -47,7 +47,7 @@ When each instance is created, it has its own distinct infrastructure object ass
 Let's see how it works:
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_02/iac/provider.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_02/iac/provider.tf">
     Edit provider.tf
 </walkthrough-editor-open-file>
 ```tf
@@ -58,7 +58,7 @@ provider "google" {
 ```
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_02/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_02/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 ```tf
@@ -77,7 +77,7 @@ _*Example*_ : John Do -> name = "tf-lab-advabced-bucket-${count.index}-jdo"
 
 Let's access the working directory :
 ```bash
-cd ~/cloudshell_open/terraform_labs/advanced/lab_02/iac/
+cd ~/cloudshell_open/wam-tf-labs/advanced/lab_02/iac/
 ```
 Initialize terraform :
 ```bash
@@ -124,7 +124,7 @@ The **depends_on** meta-argument is used in Terraform to define explicit depende
 Example:
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_02/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_02/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 
@@ -174,7 +174,7 @@ In this section we will see how to deploy multiple secrets in your project using
 Let's edit main.tf and add the folowing resources:
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/advanced/lab_02/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/advanced/lab_02/iac/main.tf">
     Edit main.tf
 </walkthrough-editor-open-file>
 
