@@ -171,7 +171,7 @@ You should see `No changes`. Your infrastructure matches the configuration."
 ## Use locals
 <em>Terraform local values (or "locals") assign a name to an expression or value. Using locals **simplifies** your Terraform configuration – since you can reference the local **multiple** times, you **reduce** duplication in your code. Locals can also help you write **more readable** configuration by using meaningful names **rather** than hard-coding values.</em>
 
-We have a resource naming convention within **DAVIDSON** organization that says that a Bigquery Dataset should always be prefixed with `s4a_bqd_`. We can use local variables to ensure that we meet this requirement:
+We have a resource naming convention within **DAVIDSON** organization that says that a Bigquery Dataset should always be prefixed with `dav_bqd_`. We can use local variables to ensure that we meet this requirement:
 
 <walkthrough-editor-open-file
     filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/main.tf">
@@ -180,7 +180,7 @@ We have a resource naming convention within **DAVIDSON** organization that says 
 
 ```tf
 locals {
-  org_dataset_id = "s4a_bqd_${var.dataset_id}"
+  org_dataset_id = "dav_bqd_${var.dataset_id}"
 
 }
 resource "google_bigquery_dataset" "dataset" {
