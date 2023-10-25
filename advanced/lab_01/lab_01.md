@@ -267,7 +267,7 @@ Let's edit function source code and make some changes.
 </walkthrough-editor-open-file>
 ```python
 def say_hello(request):
-    print("Hello Sephora") # some changes goes here
+    print("Hello Davidson") # some changes goes here
 ```
 
 ```bash
