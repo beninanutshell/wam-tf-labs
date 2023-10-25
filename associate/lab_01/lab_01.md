@@ -53,14 +53,14 @@ Run the script:
 ```
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_01/setup_project.sh">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_01/setup_project.sh">
     check script
 </walkthrough-editor-open-file>
 
 ## Inspect terraform code
 Let's see what we have, open Cloud Shell Editor and take a look at the file named main.tf :
 
-<walkthrough-editor-open-file filePath="cloudshell_open/terraform_labs/associate/lab_01/iac/main.tf">Open main.tf</walkthrough-editor-open-file>
+<walkthrough-editor-open-file filePath="cloudshell_open/wam-tf-labs/associate/lab_01/iac/main.tf">Open main.tf</walkthrough-editor-open-file>
 
 Files in this directory are intended to deploy a GCS bucket to Google Cloud.
 ***
@@ -83,7 +83,7 @@ Save file 📝.
 
 Go to the working directory :
 ```bash
-cd ~/cloudshell_open/terraform_labs/associate/lab_01/iac
+cd ~/cloudshell_open/wam-tf-labs/associate/lab_01/iac
 ```
 
 Run
@@ -121,7 +121,7 @@ Verify that the bucket is created successfully.
 
 Notice that Terraform generates a `terraform.tfstate` file locally that contains traces of what has been created. Inspect the file:
 
-<walkthrough-editor-open-file filePath="cloudshell_open/terraform_labs/associate/lab_01/iac/terraform.tfstate">Open terraform.tfstate</walkthrough-editor-open-file>
+<walkthrough-editor-open-file filePath="cloudshell_open/wam-tf-labs/associate/lab_01/iac/terraform.tfstate">Open terraform.tfstate</walkthrough-editor-open-file>
 
 ## Cleanup
 

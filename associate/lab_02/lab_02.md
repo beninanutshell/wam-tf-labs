@@ -10,7 +10,7 @@ In this lab, you'll learn how to work with Terraform **GCP Provider**.
 
 **Tip** : Trainer should tell you what project to select.
 
-Copy and paste the following code to the file named <walkthrough-editor-open-file filePath="cloudshell_open/terraform_labs/associate/lab_02/iac/provider.tf">provider.tf</walkthrough-editor-open-file>
+Copy and paste the following code to the file named <walkthrough-editor-open-file filePath="cloudshell_open/wam-tf-labs/associate/lab_02/iac/provider.tf">provider.tf</walkthrough-editor-open-file>
 
 ```tf
 provider "google" {
@@ -26,7 +26,7 @@ provider "google-beta" {
 
 Run the following command to access the working directory :
 ```bash
-cd ~/cloudshell_open/terraform_labs/associate/lab_02/iac
+cd ~/cloudshell_open/wam-tf-labs/associate/lab_02/iac
 ```
 Let's initialize the providers `google`and `google-beta` :
 ```bash
@@ -80,7 +80,7 @@ Let's try to create a GCS storage bucket using that provider.
 
 Copy the following content to the file `main.tf`.
 
-<walkthrough-editor-open-file filePath="cloudshell_open/terraform_labs/associate/lab_02/iac/main.tf">Open main.tf</walkthrough-editor-open-file>
+<walkthrough-editor-open-file filePath="cloudshell_open/wam-tf-labs/associate/lab_02/iac/main.tf">Open main.tf</walkthrough-editor-open-file>
 
 ```tf
 resource "google_storage_bucket" "static_1" {
@@ -120,7 +120,7 @@ Let's deploy another bucket to a different project and in a different location.
 
 Add the following code to main.tf
 
-<walkthrough-editor-open-file filePath="cloudshell_open/terraform_labs/associate/lab_02/iac/main.tf">Open main.tf</walkthrough-editor-open-file>
+<walkthrough-editor-open-file filePath="cloudshell_open/wam-tf-labs/associate/lab_02/iac/main.tf">Open main.tf</walkthrough-editor-open-file>
 
 
 ```tf

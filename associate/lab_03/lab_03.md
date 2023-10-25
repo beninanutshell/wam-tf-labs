@@ -46,7 +46,7 @@ Let's use what we have learned in previous labs to create a bigquery dataset.
 Edit provider.tf and add the following bloc :
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/provider.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/provider.tf">
     Open provider.tf
 </walkthrough-editor-open-file>
 
@@ -60,7 +60,7 @@ provider "google" {
 Now, let's declare the resource :
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/main.tf">
     Open main.tf
 </walkthrough-editor-open-file>
 
@@ -79,7 +79,7 @@ __Example__ : John Do -> dataset_id = "example_dataset_jdo"
 
 Let's access the working directory :
 ```bash
-cd ~/cloudshell_open/terraform_labs/associate/lab_03/iac/
+cd ~/cloudshell_open/wam-tf-labs/associate/lab_03/iac/
 ```
 Initialize terraform :
 ```bash
@@ -106,7 +106,7 @@ Let's make the code looks better by using variables.
 
 Update `main.tf`
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/main.tf">
     Open main.tf
 </walkthrough-editor-open-file>
 
@@ -120,7 +120,7 @@ resource "google_bigquery_dataset" "dataset" {
 ```
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/variables.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/variables.tf">
     Open variables.tf
 </walkthrough-editor-open-file>
 
@@ -147,7 +147,7 @@ variable "location" {
 Update `terraform.tfvars`
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/terraform.tfvars">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/terraform.tfvars">
     Open terraform.tfvars
 </walkthrough-editor-open-file>
 
@@ -174,7 +174,7 @@ You should see `No changes`. Your infrastructure matches the configuration."
 We have a resource naming convention within **DAVIDSON** organization that says that a Bigquery Dataset should always be prefixed with `s4a_bqd_`. We can use local variables to ensure that we meet this requirement:
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/main.tf">
     Update main.tf
 </walkthrough-editor-open-file>
 
@@ -209,7 +209,7 @@ Verify that the new dataset is created successfully and the old datset is delete
 Let's create a table in the dataset previously created. Add the table definition to main.tf :
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/main.tf">
     Update main.tf :
 </walkthrough-editor-open-file>
 
@@ -273,7 +273,7 @@ We have created a service account named `sac-lab-terraform`. Let's use the data 
 Add the following data source to `main.tf`
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/main.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/main.tf">
     Update main.tf
 </walkthrough-editor-open-file>
 
@@ -307,7 +307,7 @@ Let's export some information about the dataset we have created in this lab. You
 [here](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/bigquery_dataset#attributes-reference).
 
 <walkthrough-editor-open-file
-    filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/outputs.tf">
+    filePath="cloudshell_open/wam-tf-labs/associate/lab_03/iac/outputs.tf">
     Edit outputs.tf
 </walkthrough-editor-open-file>
 
