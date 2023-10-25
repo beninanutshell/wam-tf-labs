@@ -33,7 +33,7 @@ Let's initialize the providers `google`and `google-beta` :
 terraform init
 ```
 You should see similar output :
-![tf_init](https://storage.googleapis.com/s4a-shared-terraform-gcs-lab-materials/tf_init.png)
+![tf_init](https://storage.googleapis.com/bkt-public-images/tf_init.png)
 
 <em>Terraform GCP provider definition block supports multiple arguments. Here for instance we specified `project` and `region`, which means all resources are going to be created in that project and in that specefic region unless it is specified differently in the resource bloc. i.e `project` and `region` in the resource bloc overrides those in the provider definition bloc.</em>
 
@@ -55,7 +55,7 @@ gcloud auth application-default login --no-launch-browser
 Steps:
  - Answer **Yes** when prompted
  - Click the link that appears
- - Chose your account **(Make sure to select your Sephora account)**
+ - Chose your account **(Make sure to select your Davidson account)**
  - Click allow
  - Copy the code and paste it back to cloud shell
  - Press Enter.
@@ -67,7 +67,7 @@ Steps:
 
  This command will add a quota project in application default credentials and saves the credentials file to a temp directory :
 
- ![DAVIDSON_TERRAFORM](https://storage.googleapis.com/s4a-shared-terraform-gcs-lab-materials/cred_path.png)
+ ![DAVIDSON_TERRAFORM](https://storage.googleapis.com/bkt-public-images/cred_path.png)
 
  Run :
  ```bash

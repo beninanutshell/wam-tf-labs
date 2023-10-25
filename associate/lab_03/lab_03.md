@@ -1,4 +1,4 @@
-# [Associate] SEPHORA Terraform Course - Lab 03 : resources/variables/locals/data/outputs
+# [Associate] Davidson Terraform Course - Lab 03 : resources/variables/locals/data/outputs
 ## Introduction
 ![DAVIDSON_TERRAFORM](https://storage.googleapis.com/bkt-public-images/Davidson-Fond%20De%CC%81grade%CC%81.jpg)
 
@@ -18,7 +18,7 @@ In this lab, we will see :
   Steps:
    - Answer **Yes** when prompted
    - Click the link that appears
-   - Chose your account **(Make sure to select your Sephora account)**
+   - Chose your account **(Make sure to select your Davidson account)**
    - Click allow
    - Copy the code and paste it back to cloud shell
    - Press Enter.
@@ -33,7 +33,7 @@ In this lab, we will see :
 
   This command will add a quota project in application default credentials and saves the credentials file to a temp directory :
 
-  ![SEPHORA_TERRAFORM](https://storage.googleapis.com/s4a-shared-terraform-gcs-lab-materials/cred_path.png)
+  ![DAVIDSON_TERRAFORM](https://storage.googleapis.com/bkt-public-images/Davidson-Fond%20De%CC%81grade%CC%81.jpg)
 
   Run :
   ```bash
@@ -90,7 +90,7 @@ Plan your infrastructure :
 terraform plan
 ```
 You should see similar output :
-![tf_apply](https://storage.googleapis.com/s4a-shared-terraform-gcs-lab-materials/tf_apply.png)
+![tf_apply](https://storage.googleapis.com/bkt-public-images/tf_apply.png)
 
 Let's deploy the resource :
 ```bash
@@ -171,7 +171,7 @@ You should see `No changes`. Your infrastructure matches the configuration."
 ## Use locals
 <em>Terraform local values (or "locals") assign a name to an expression or value. Using locals **simplifies** your Terraform configuration – since you can reference the local **multiple** times, you **reduce** duplication in your code. Locals can also help you write **more readable** configuration by using meaningful names **rather** than hard-coding values.</em>
 
-We have a resource naming convention within **SEPHORA** organization that says that a Bigquery Dataset should always be prefixed with `s4a_bqd_`. We can use local variables to ensure that we meet this requirement:
+We have a resource naming convention within **DAVIDSON** organization that says that a Bigquery Dataset should always be prefixed with `s4a_bqd_`. We can use local variables to ensure that we meet this requirement:
 
 <walkthrough-editor-open-file
     filePath="cloudshell_open/terraform_labs/associate/lab_03/iac/main.tf">
@@ -329,7 +329,7 @@ terraform plan
 terraform apply --auto-approve
 ```
 You should see similar output :
-![SEPHORA_TERRAFORM](https://storage.googleapis.com/s4a-shared-terraform-gcs-lab-materials/output.png)
+![DAVIDSON_TERRAFORM](https://storage.googleapis.com/bkt-public-images/output.png)
 
 We will explore in more details how to use output values in the code in another advanced lab about Terraform modules.
 
